@@ -22,3 +22,5 @@ exchangeBtn.addEventListener("click", getExchangeRate);
 window.addEventListener("load", ()=>{
     getExchangeRate();
 });
+
+amount.addEventListener("change", getExchangeRate);
