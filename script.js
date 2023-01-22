@@ -16,3 +16,5 @@ let country_list = {
         element.insertAdjacentHTML("beforeend", optionTag);
     }
 });
+
+exchangeBtn.addEventListener("click", getExchangeRate);
