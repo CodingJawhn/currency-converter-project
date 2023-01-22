@@ -6,7 +6,7 @@ let country_list = {
     "AUD" : "AU",
  }
  const dropList = Array.from(document.querySelectorAll(".drop-list select"))
-
+ const exchangeBtn = document.getElementsByTagName("button")[0];
 
 
 
