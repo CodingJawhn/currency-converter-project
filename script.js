@@ -38,6 +38,8 @@ function getExchangeRate() {
     fetch(url)
         .then(response => response.json())
         .then(result => {
-
+            let exchangeRate = result.rates[toCurr.value];
+            let finalExchangeRate = (amountVal * exchangeRate).toFixed(2);
+            exchangeRateTxt.innerText = `${amountVal} ${fromCurr.value} = ${finalExchangeRate} ${toCurr.value}`;
         })
 }
