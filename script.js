@@ -18,3 +18,7 @@ let country_list = {
 });
 
 exchangeBtn.addEventListener("click", getExchangeRate);
+
+window.addEventListener("load", ()=>{
+    getExchangeRate();
+});
