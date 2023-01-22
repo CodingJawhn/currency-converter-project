@@ -9,7 +9,7 @@ let country_list = {
  const exchangeBtn = document.getElementsByTagName("button")[0];
  const fromCurr = document.getElementsByTagName("select")[0];
  const toCurr = document.getElementsByTagName("select")[1];
-
+ const amount = document.getElementsByTagName("input")[0];
 
 
  dropList.forEach(element => {
