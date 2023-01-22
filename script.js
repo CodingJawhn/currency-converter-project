@@ -33,4 +33,9 @@ function getExchangeRate() {
         amount.value = "1";
         amountVal = 1;
     }
+    exchangeRateTxt.innerText = "Loading...";
+    let url = `https://open.er-api.com/v6/latest/${fromCurr.value}`;
+    fetch(url)
+        .then(response => response.json())
+        .then(result => {})
 }
