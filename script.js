@@ -28,4 +28,9 @@ window.addEventListener("load", ()=>{
 amount.addEventListener("change", getExchangeRate);
 
 function getExchangeRate() {
+    let amountVal = amount.value;
+    if(amountVal == "" || amountVal == "0") {
+        amount.value = "1";
+        amountVal = 1;
+    }
 }
