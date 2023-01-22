@@ -6,3 +6,9 @@ body {
     background: aquamarine;
 }
 
+.wrapper {
+    width: 380px;
+    padding: 30px;
+    border-radius: 7px;
+    background: antiquewhite;
+}
