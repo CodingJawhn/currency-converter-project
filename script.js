@@ -10,7 +10,7 @@ let country_list = {
  const fromCurr = document.getElementsByTagName("select")[0];
  const toCurr = document.getElementsByTagName("select")[1];
  const amount = document.getElementsByTagName("input")[0];
-
+ const exchangeRateTxt = document.getElementsByClassName("exchange-rate")[0];
 
  dropList.forEach(element => {
     for(currency_list in country_list) {
@@ -37,5 +37,7 @@ function getExchangeRate() {
     let url = `https://open.er-api.com/v6/latest/${fromCurr.value}`;
     fetch(url)
         .then(response => response.json())
-        .then(result => {})
+        .then(result => {
+
+        })
 }
