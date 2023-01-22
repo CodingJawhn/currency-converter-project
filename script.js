@@ -5,3 +5,4 @@ let country_list = {
     "USD" : "US",
     "AUD" : "AU",
  }
+ const dropList = Array.from(document.querySelectorAll(".drop-list select"))
