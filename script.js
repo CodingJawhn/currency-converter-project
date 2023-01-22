@@ -26,3 +26,6 @@ window.addEventListener("load", ()=>{
 });
 
 amount.addEventListener("change", getExchangeRate);
+
+function getExchangeRate() {
+}
