@@ -12,3 +12,8 @@ body {
     border-radius: 7px;
     background: antiquewhite;
 }
+
+.wrapper header{
+    font-size: 30px;
+}
+
