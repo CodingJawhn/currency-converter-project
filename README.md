@@ -13,3 +13,4 @@ exchange button that creates the currency conversion
 ## Usage
 
 1 USD = 129.63 JPY
+Button to initiate exchange
