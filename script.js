@@ -27,11 +27,16 @@ window.addEventListener("load", ()=>{
 
 amount.addEventListener("change", getExchangeRate);
 
+function updateExchangeRate(amountVal, exchangeRate) {
+    let finalExchangeRate = (amountVal * exchangeRate).toFixed(2);
+    exchangeRateTxt.innerText = `${amountVal} ${fromCurr.value} = ${finalExchangeRate} ${toCurr.value}`;
+}
+
 function getExchangeRate() {
     let amountVal = amount.value;
     if(amountVal == "" || amountVal == "0") {
-        amount.value = "1";
         amountVal = 1;
+        amount.value = "1";
     }
     exchangeRateTxt.innerText = "Loading...";
     let url = `https://open.er-api.com/v6/latest/${fromCurr.value}`;
@@ -39,7 +44,6 @@ function getExchangeRate() {
         .then(response => response.json())
         .then(result => {
             let exchangeRate = result.rates[toCurr.value];
-            let finalExchangeRate = (amountVal * exchangeRate).toFixed(2);
-            exchangeRateTxt.innerText = `${amountVal} ${fromCurr.value} = ${finalExchangeRate} ${toCurr.value}`;
+            updateExchangeRate(amountVal, exchangeRate);
         })
 }
